@@ -24,7 +24,7 @@ mixin _$ZennModel {
   int get commentCount => throw _privateConstructorUsedError;
   int get likedCount => throw _privateConstructorUsedError;
   String get emoji => throw _privateConstructorUsedError;
-  String get updatedAt => throw _privateConstructorUsedError;
+  String get sourceRepoUpdatedAt => throw _privateConstructorUsedError;
   String get path => throw _privateConstructorUsedError;
   Map<String, dynamic> get user => throw _privateConstructorUsedError;
 
@@ -44,7 +44,7 @@ abstract class $ZennModelCopyWith<$Res> {
       int commentCount,
       int likedCount,
       String emoji,
-      String updatedAt,
+      String sourceRepoUpdatedAt,
       String path,
       Map<String, dynamic> user});
 }
@@ -66,7 +66,7 @@ class _$ZennModelCopyWithImpl<$Res, $Val extends ZennModel>
     Object? commentCount = null,
     Object? likedCount = null,
     Object? emoji = null,
-    Object? updatedAt = null,
+    Object? sourceRepoUpdatedAt = null,
     Object? path = null,
     Object? user = null,
   }) {
@@ -87,9 +87,9 @@ class _$ZennModelCopyWithImpl<$Res, $Val extends ZennModel>
           ? _value.emoji
           : emoji // ignore: cast_nullable_to_non_nullable
               as String,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
+      sourceRepoUpdatedAt: null == sourceRepoUpdatedAt
+          ? _value.sourceRepoUpdatedAt
+          : sourceRepoUpdatedAt // ignore: cast_nullable_to_non_nullable
               as String,
       path: null == path
           ? _value.path
@@ -115,7 +115,7 @@ abstract class _$$_ZennModelCopyWith<$Res> implements $ZennModelCopyWith<$Res> {
       int commentCount,
       int likedCount,
       String emoji,
-      String updatedAt,
+      String sourceRepoUpdatedAt,
       String path,
       Map<String, dynamic> user});
 }
@@ -135,7 +135,7 @@ class __$$_ZennModelCopyWithImpl<$Res>
     Object? commentCount = null,
     Object? likedCount = null,
     Object? emoji = null,
-    Object? updatedAt = null,
+    Object? sourceRepoUpdatedAt = null,
     Object? path = null,
     Object? user = null,
   }) {
@@ -156,9 +156,9 @@ class __$$_ZennModelCopyWithImpl<$Res>
           ? _value.emoji
           : emoji // ignore: cast_nullable_to_non_nullable
               as String,
-      updatedAt: null == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
+      sourceRepoUpdatedAt: null == sourceRepoUpdatedAt
+          ? _value.sourceRepoUpdatedAt
+          : sourceRepoUpdatedAt // ignore: cast_nullable_to_non_nullable
               as String,
       path: null == path
           ? _value.path
@@ -180,7 +180,7 @@ class _$_ZennModel with DiagnosticableTreeMixin implements _ZennModel {
       required this.commentCount,
       required this.likedCount,
       required this.emoji,
-      required this.updatedAt,
+      required this.sourceRepoUpdatedAt,
       required this.path,
       required final Map<String, dynamic> user})
       : _user = user;
@@ -197,7 +197,7 @@ class _$_ZennModel with DiagnosticableTreeMixin implements _ZennModel {
   @override
   final String emoji;
   @override
-  final String updatedAt;
+  final String sourceRepoUpdatedAt;
   @override
   final String path;
   final Map<String, dynamic> _user;
@@ -210,7 +210,7 @@ class _$_ZennModel with DiagnosticableTreeMixin implements _ZennModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ZennModel(title: $title, commentCount: $commentCount, likedCount: $likedCount, emoji: $emoji, updatedAt: $updatedAt, path: $path, user: $user)';
+    return 'ZennModel(title: $title, commentCount: $commentCount, likedCount: $likedCount, emoji: $emoji, sourceRepoUpdatedAt: $sourceRepoUpdatedAt, path: $path, user: $user)';
   }
 
   @override
@@ -222,7 +222,7 @@ class _$_ZennModel with DiagnosticableTreeMixin implements _ZennModel {
       ..add(DiagnosticsProperty('commentCount', commentCount))
       ..add(DiagnosticsProperty('likedCount', likedCount))
       ..add(DiagnosticsProperty('emoji', emoji))
-      ..add(DiagnosticsProperty('updatedAt', updatedAt))
+      ..add(DiagnosticsProperty('sourceRepoUpdatedAt', sourceRepoUpdatedAt))
       ..add(DiagnosticsProperty('path', path))
       ..add(DiagnosticsProperty('user', user));
   }
@@ -238,16 +238,23 @@ class _$_ZennModel with DiagnosticableTreeMixin implements _ZennModel {
             (identical(other.likedCount, likedCount) ||
                 other.likedCount == likedCount) &&
             (identical(other.emoji, emoji) || other.emoji == emoji) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
+            (identical(other.sourceRepoUpdatedAt, sourceRepoUpdatedAt) ||
+                other.sourceRepoUpdatedAt == sourceRepoUpdatedAt) &&
             (identical(other.path, path) || other.path == path) &&
             const DeepCollectionEquality().equals(other._user, _user));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, commentCount, likedCount,
-      emoji, updatedAt, path, const DeepCollectionEquality().hash(_user));
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      commentCount,
+      likedCount,
+      emoji,
+      sourceRepoUpdatedAt,
+      path,
+      const DeepCollectionEquality().hash(_user));
 
   @JsonKey(ignore: true)
   @override
@@ -269,7 +276,7 @@ abstract class _ZennModel implements ZennModel {
       required final int commentCount,
       required final int likedCount,
       required final String emoji,
-      required final String updatedAt,
+      required final String sourceRepoUpdatedAt,
       required final String path,
       required final Map<String, dynamic> user}) = _$_ZennModel;
 
@@ -285,7 +292,7 @@ abstract class _ZennModel implements ZennModel {
   @override
   String get emoji;
   @override
-  String get updatedAt;
+  String get sourceRepoUpdatedAt;
   @override
   String get path;
   @override
