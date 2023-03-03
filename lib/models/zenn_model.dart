@@ -11,7 +11,7 @@ class ZennModel with _$ZennModel {
     required int commentCount,
     required int likedCount,
     required String emoji,
-    required String updatedAt,
+    required String sourceRepoUpdatedAt,
     required String path,
     required Map<String, dynamic> user,
   }) = _ZennModel;

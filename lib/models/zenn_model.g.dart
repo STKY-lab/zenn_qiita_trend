@@ -11,7 +11,7 @@ _$_ZennModel _$$_ZennModelFromJson(Map<String, dynamic> json) => _$_ZennModel(
       commentCount: json['commentCount'] as int,
       likedCount: json['likedCount'] as int,
       emoji: json['emoji'] as String,
-      updatedAt: json['updatedAt'] as String,
+      sourceRepoUpdatedAt: json['sourceRepoUpdatedAt'] as String,
       path: json['path'] as String,
       user: json['user'] as Map<String, dynamic>,
     );
@@ -22,7 +22,7 @@ Map<String, dynamic> _$$_ZennModelToJson(_$_ZennModel instance) =>
       'commentCount': instance.commentCount,
       'likedCount': instance.likedCount,
       'emoji': instance.emoji,
-      'updatedAt': instance.updatedAt,
+      'sourceRepoUpdatedAt': instance.sourceRepoUpdatedAt,
       'path': instance.path,
       'user': instance.user,
     };
